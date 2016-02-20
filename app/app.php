@@ -15,7 +15,7 @@
     $app->get("/results", function() use ($app) {
         $new_counter = new RepeatCounter;
         $results = $new_counter->repeatCounter($_GET['word'], $_GET['paragraph']);
-        return $app['twig']->render("results.html.twig", array('results' => $results, 'word' => $_GET['word']));
+        return $app['twig']->render("results.html.twig", array('results' => $results, 'word' => $_GET['word'], 'paragraph' => $_GET['paragraph']));
     });
 
     return $app;

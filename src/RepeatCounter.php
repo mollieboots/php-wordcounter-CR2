@@ -27,6 +27,7 @@
 
         function repeatCounter($input_word, $input_string)
         {
+            $input_word = strtolower($input_word);
             $input_string = $this->remove_punctutation($input_string);
             $exploded_string = $this->explode_string($input_string);
             $results = $this->check_for_matches($input_word, $exploded_string);
